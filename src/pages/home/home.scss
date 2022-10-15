@@ -1,0 +1,25 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__presint-time {
+    direction: ltr;
+    font-weight: bold;
+    font-size: 10rem;
+    padding: 2rem 0;
+  }
+  &__times {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    &__presint-time {
+      font-size: 6rem;
+    }
+  }
+}

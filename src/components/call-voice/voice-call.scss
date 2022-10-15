@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+.call-voice {
+  display: flex;
+  align-items: center;
+  font-size: 2.4rem;
+  margin-top: 0.5rem;
+  .checkbox {
+    accent-color: $primary;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 4rem;
+    cursor: pointer;
+  }
+}

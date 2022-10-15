@@ -1,0 +1,22 @@
+@import '../../sass/variables';
+
+.record-voice {
+  width: 100%;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .close-btn {
+    cursor: pointer;
+    &:hover {
+      color: darken($color: red, $amount: 5);
+    }
+  }
+  .record-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

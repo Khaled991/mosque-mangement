@@ -1,0 +1,24 @@
+@import '../../sass/variables';
+
+.custom-input {
+  font-size: 1.6rem;
+  background-color: $white;
+
+  outline: none;
+}
+
+::-webkit-file-upload-button {
+  color: $white;
+  background-color: $primary;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-left: 2rem;
+  box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.6);
+  transition: $transition;
+  &:hover {
+    background-color: $darkPrimary;
+  }
+}

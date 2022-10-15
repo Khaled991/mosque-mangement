@@ -1,0 +1,67 @@
+@import '../../sass/variables';
+.menu-container {
+  &__btn {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: $primary;
+    width: 6rem;
+    height: 6rem;
+    background-color: $white;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    z-index: 2;
+    .btn-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: $primary;
+    }
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: fixed;
+      top: 40%;
+      right: 5rem;
+      background-color: $white;
+      padding: 2rem;
+      width: 50rem;
+      z-index: 14;
+      min-height: 20rem;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-container {
+    &__btn {
+      top: 0%;
+    }
+    .menu {
+      &__content {
+        top: 10%;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
+}

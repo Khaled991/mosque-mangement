@@ -1,0 +1,32 @@
+@import '../../../sass/variables';
+
+.play-video-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: $primary;
+  border-radius: 3.5rem;
+  cursor: pointer;
+  transition: $transition;
+  margin-top: 1.5rem;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $white;
+  }
+
+  &:hover {
+    background-color: $darkPrimary;
+  }
+}
+
+.color {
+  background-color: red;
+  &:hover {
+    background-color: darken(rgb(218, 3, 3), $amount: 2);
+  }
+}
