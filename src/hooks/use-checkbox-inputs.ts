@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export type SetCheckBoxsValue = ({
   target: { checked, name },
@@ -8,11 +8,11 @@ export type ChangeValueFn<T extends {}> = (values: T) => void;
 
 const useCheckBoxInputs = <T extends {}>(
   initialValue?: T
-): [T | undefined, SetCheckBoxsValue] => {
+): [T | undefined, SetCheckBoxsValue, ChangeValueFn<T>] => {
   const [formValues, setFormValues] = useState<T | undefined>(initialValue);
 
   const setValues = (values: T) =>
-    typeof formValues === 'undefined'
+    typeof formValues === "undefined"
       ? setFormValues(values)
       : setFormValues({ ...formValues, ...values });
 
@@ -21,7 +21,7 @@ const useCheckBoxInputs = <T extends {}>(
   }: React.ChangeEvent<HTMLInputElement>) =>
     setValues({ [name]: checked } as T);
 
-  return [formValues, setCheckboxsValue];
+  return [formValues, setCheckboxsValue, setValues];
 };
 
 export default useCheckBoxInputs;
